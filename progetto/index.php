@@ -54,7 +54,7 @@
   </a>
 </div>
 
-<div style="background-color:black">
+<div>
   
   <div class="container" style="max-width:100%">
     <img src="assets/carousel_3.jpg">
@@ -214,9 +214,9 @@
       </div>
     </div>
   </div>
-  -->
+  
 
-  <div class="jumbotron text-center" style="margin-bottom:0">
+  <div class="jumbotron text-center" style="margin-bottom:0 background-color:#48494a">
     <div class="row">
       <div class="col-sm-4">
         <ul class="nav nav-pills flex-column">
@@ -237,6 +237,62 @@
     </div>
   </div>
 
+
+  <div style="background-color:#262626; height:1px; margin-top:30px; margin-left:20%; margin-right:20%;"></div>
+
+  <div style="margin-bottom:30px; margin-top:20px;">
+    <div class="flexrow" style="padding-right:10%; padding-left:25%;">
+      <div class="column" style="flex:33%; text-align:left;">
+        <h5>Sezione 1</h5>
+        <div>
+          <a href="#">Link 1<a>
+        </div>
+        <div>
+          <a href="#">Link 2<a>
+        </div>
+        <div>
+          <a href="#">Link 3<a>
+        </div>
+        <div>
+          <a href="#">Link 4<a>
+        </div>
+      </div>
+      <div class="column" style="flex:33%; text-align:left;">
+        <h5>Sezione 2</h5>
+        <div>
+          <a href="#">Link 1<a>
+        </div>
+        <div>
+          <a href="#">Link 2<a>
+        </div>
+        <div>
+          <a href="#">Link 3<a>
+        </div>
+        <div>
+          <a href="#">Link 4<a>
+        </div>
+      </div>
+      <div class="column" style="flex:33%; text-align:left;">
+        <h5>Sezione 3</h5>
+        <div>
+          <a href="#">Link 1<a>
+        </div>
+        <div>
+          <a href="#">Link 2<a>
+        </div>
+        <div>
+          <a href="#">Link 3<a>
+        </div>
+        <div>
+          <a href="#">Link 4<a>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+<?php 
+  include 'footer.html'
+?>
 </div>
 
 </body>

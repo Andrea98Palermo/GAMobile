@@ -1,4 +1,11 @@
+    /*IMPORTANTE ALTRIMENTI I MODAL FREEZANO*/
+    body.modal-open div.modal-backdrop { 
+      z-index: 0; 
+    }
 
+    
+    
+    
     .fakeimg {
       height: 200px;
       background: #aaa;
@@ -21,6 +28,7 @@
     body{
       height: 100vh;
       text-align: center;
+      background-color: black;
     }
       /*Trigger Button*/
     .login-trigger {
@@ -86,13 +94,15 @@
 
     .navbar{
         height: 65px; 
-    } 
+    }
+    
+    .navbar-dark {
+      opacity: 1.0;
+    }
 
     .login-item{
         margin-left: 30px;
     }
-
-
 
     .row {
       display: flex;

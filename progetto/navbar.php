@@ -1,5 +1,13 @@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    $(window).scroll(function(){
+      var scrollval = window.pageYOffset;
+      if(scrollval == 0){document.getElementById("bar").style.opacity = 1.0;}
+      else{document.getElementById("bar").style.opacity = 0.7;}
+    });
+</script>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar fixed-top">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar fixed-top" id="bar">
   <a class="navbar-brand" href="index.php">GAMobile</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
