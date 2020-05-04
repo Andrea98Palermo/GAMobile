@@ -1,6 +1,6 @@
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">GAMobile</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar fixed-top">
+  <a class="navbar-brand" href="index.php">GAMobile</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,10 +16,10 @@
         <a class="nav-link" href="#">Offers</a>
       </li>    
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="about_us.php">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contacts & assistance</a>
+        <a class="nav-link" href="contacts_assistance.php">Contacts & assistance</a>
       </li>
 
       <?php 
@@ -27,9 +27,7 @@
             echo 
             '
             <li class="nav-item login-item">
-
                 <a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
-
                 <div id="login" class="modal fade" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -46,7 +44,6 @@
                         </div>
                     </div>  
                 </div>
-
             </li> 
             ';
         }

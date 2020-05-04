@@ -14,7 +14,7 @@
       text-align: center;
     }
     .carousel {
-      height: 500px;
+      height: 90%;
       width: auto;
     }
     
@@ -55,7 +55,7 @@
     }
     .username, .password {
       border: none;
-      border-radius: 0;
+      border-radius: 30px;
       box-shadow: none;
       border-bottom: 2px solid #eee;
       padding-left: 0;
@@ -91,3 +91,168 @@
     .login-item{
         margin-left: 30px;
     }
+
+
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    
+    .container img
+    {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    */
+
+    /* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.big-text-block {
+  position: absolute;
+  top: 70px;
+  right: 35%;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.small-text-block {
+  position: absolute;
+  top: 70px;
+  right: 35%;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 3px;
+  opacity: 0.6;
+}
+
+.big-text-block h5 {
+  font-size: 500%;
+}
+
+.small-text-block h5{
+  font-size: 250%;
+}
+
+    /*-------------------------------------------------------------------------------------------------------*/
+    
+
+    /*distanziare tra sezioni*/
+    .big-padding{padding: 50px 0;}
+
+
+
+    /*per la cover immagine*/
+    .cover{height: 80%;border: 1px;
+    background-image: url("https://source.unsplash.com/random");
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size:cover;
+    background-position: center center;
+    position: relative;
+    }
+
+    .cover__caption{
+      display: table;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+
+    .cover__caption__copy{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color:#fff;
+    }
+
+    .cover__caption__filter{
+      background:#000;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .cover--single{height: 60%;}
+
+    /*cardddd*/
+
+    .cards{max-width: 1000px; margin: 40px auto;}
+    .card{width: 30%;margin: 0 1.5%;background: #fff; float: left;}
+    .card__image{width: 100%;height: auto;}
+    .card__copy{padding:5px 20px;}
+    .card__copy h3{margin-bottom: 0;}
+
+    /*banner*/
+
+    .banner{background: #fff; height: 50%; margin: 40px auto;}
+    .banner__image{width: 30%;float: left; height: 100%;
+      background-image: url("https://source.unsplash.com/random/400x400");
+      background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size:cover;
+      background-position: center center;}
+    .banner__copy{width: 70%;float: left; height: 100%;display: table;}
+    .banner__copy__text{display: table-cell;vertical-align: middle;padding: 30px;}
+    .banner__copy__text h3{font-size: 36px;}
+
+
+    .clearfix:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+    * html .clearfix             { zoom: 1; } /* IE6 */
+    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+    /*singol per articolo*/
+    .single{}
+    .single__copy{max-width: 800px; margin: 0px auto;margin-top: -60px; background: #fff; padding: 20px; position: relative; z-index: 1;}
+    
