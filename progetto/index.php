@@ -54,69 +54,101 @@
   </a>
 </div>
 
-<div>
+
   
   <div class="container" style="max-width:100%">
     <img src="assets/carousel_3.jpg">
     <div class="big-text-block">
-      <h5>Product/Offer</h5>
-      <p>Altre informazioni sul prodotto</p>
+      <div class="text-in-block">
+        <h5>Product/Offer</h5>
+      </div>
+      <div class="text-in-block">  
+        <p>Altre informazioni sul prodotto</p>
+      </div>
     </div>
   </div>
   <div class="container" style="max-width:100%">
     <img src="assets/carousel_2.jpg">
     <div class="big-text-block">
-      <h5>Ptoduct/Offer</h5>
-      <p>Altre informazioni sul prodotto</p>
+      <div class="text-in-block">
+        <h5>Product/Offer</h5>
+      </div>
+      <div class="text-in-block">  
+        <p>Altre informazioni sul prodotto</p>
+      </div>
     </div>
   </div>
     
 
 
   <div class="row">
-    <div class="column">
-      <div class="container" style="max-width:100%">
+    <div class="flexcolumn">
+      <div class="container">
         <img src="assets/carousel_1.jpg">
         <div class="small-text-block">
-          <h5>Product/Offer</h5>
-          <p>Altre informazioni sul prodotto</p>
+          <div class="text-in-block">
+            <h5>Product/Offer</h5>
+          </div>
+          <div class="text-in-block">  
+            <p>Altre informazioni sul prodotto</p>
+          </div>
         </div>
       </div>
-      <div class="container" style="max-width:100%">
+      <div class="container" >
         <img src="assets/carousel_2.jpg">
         <div class="small-text-block">
-          <h5>Product/Offer</h5>
-          <p>Altre informazioni sul prodotto</p>
+          <div class="text-in-block">
+            <h5>Product/Offer</h5>
+          </div>
+          <div class="text-in-block">  
+            <p>Altre informazioni sul prodotto</p>
+          </div>
         </div>
       </div>
-      <div class="container" style="max-width:100%">
+      <div class="container" >
         <img src="assets/carousel_3.jpg">
         <div class="small-text-block">
-          <h5>Product/Offer</h5>
-          <p>Altre informazioni sul prodotto</p>
+          <div class="text-in-block">
+            <h5>Product/Offer</h5>
+          </div>
+          <div class="text-in-block">  
+            <p>Altre informazioni sul prodotto</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="column">
-      <div class="container" style="max-width:100%">
+    <div class="flexcolumn">
+      <div class="container" >
         <img src="assets/carousel_1.jpg">
         <div class="small-text-block">
-          <h5>Product/Offer</h5>
-          <p>Altre informazioni sul prodotto</p>
+          <div class="text-in-block">
+            <h5>Product/Offer</h5>
+          </div>
+          <div class="text-in-block">  
+            <p>Altre informazioni sul prodotto</p>
+          </div>
         </div>
       </div>
-      <div class="container" style="max-width:100%">
+      <div class="container" >
         <img src="assets/carousel_2.jpg">
         <div class="small-text-block">
-          <h5>Product/Offer</h5>
-          <p>Altre informazioni sul prodotto</p>
+          <div class="text-in-block">
+            <h5>Product/Offer</h5>
+          </div>
+          <div class="text-in-block">  
+            <p>Altre informazioni sul prodotto</p>
+          </div>
         </div>
       </div>
-      <div class="container" style="max-width:100%">
+      <div class="container">
         <img src="assets/carousel_3.jpg">
         <div class="small-text-block">
-          <h5>Product/Offer</h5>
-          <p>Altre informazioni sul prodotto</p>
+          <div class="text-in-block">
+            <h5>Product/Offer</h5>
+          </div>
+          <div class="text-in-block">  
+            <p>Altre informazioni sul prodotto</p>
+          </div>
         </div>
       </div>
     </div>
@@ -290,10 +322,10 @@
     </div>
   </div>
 -->
-<?php 
-  include 'footer.html'
-?>
-</div>
+  <?php 
+    include 'footer.html'
+  ?>
+
 
 </body>
 </html>

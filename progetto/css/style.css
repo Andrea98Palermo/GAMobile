@@ -111,12 +111,13 @@
     }
     
     /* Create four equal columns that sits next to each other */
-    .column {
+    .flexcolumn {
       flex: 50%;
       max-width: 50%;
+      
     }
     
-    .column img {
+    .flexcolumn img {
       margin-top: 8px;
       vertical-align: middle;
       width: 100%;
@@ -131,10 +132,11 @@
     }
     /* Responsive layout - makes a two column-layout instead of four columns */
     @media screen and (max-width: 800px) {
-      .column {
+      .flexcolumn {
         flex: 100%;
         max-width: 100%;
       }
+      
     }
     
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
@@ -153,8 +155,12 @@
 
 /* Bottom right text */
 .big-text-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 40%;
+  max-width: 40%;
   position: absolute;
-  top: 70px;
+  top: 5%;
   right: 35%;
   background-color: black;
   color: white;
@@ -165,8 +171,13 @@
 }
 
 .small-text-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 40%;
+  min-width: 0;
+  max-width: 40%;
   position: absolute;
-  top: 70px;
+  top: 10%;
   right: 35%;
   background-color: black;
   color: white;
@@ -176,13 +187,11 @@
   opacity: 0.6;
 }
 
-.big-text-block h5 {
-  font-size: 500%;
+.text-in-block{
+  flex:100%;
+  max-width: 100%;
 }
 
-.small-text-block h5{
-  font-size: 250%;
-}
 
     /*-------------------------------------------------------------------------------------------------------*/
     
