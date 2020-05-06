@@ -7,11 +7,20 @@
     });
 </script>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar fixed-top" id="bar">
+<script>
+  $(window).resize(function(){
+    var w = window.innerWidth;
+    if(w < 850){document.getElementById("log_a").style.display = 'none';}
+    else{document.getElementById("log_a").style.display = 'inline';}
+  });
+</script>  
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark navbar fixed-top" id="bar">
   <a class="navbar-brand" href="index.php">GAMobile</a>
+  <!--
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -31,11 +40,11 @@
       </li>
 
       <?php 
-        if (! isset($_SESSION['session_id'])) {
+        if (! isset($_SESSION['session_user'])) {
             echo 
             '
             <li class="nav-item login-item">
-                <a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
+                <a class="login-trigger" id="log_a" href="#" data-target="#login" data-toggle="modal">Login</a>
                 <div id="login" class="modal fade" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -55,6 +64,65 @@
             </li> 
             ';
         }
+        else
+          echo 
+          '
+          <li class="nav-item login-item">
+              <a class="login-trigger" id="log_a" href="#" data-target="#login" data-toggle="modal">Hi, ', $_SESSION['session_user'] ,'</a>
+              <div id="login" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                      <div class="modal-body profile-sidebar">
+                          
+                        <button data-dismiss="modal" class="close">&times;</button>
+                        
+                        <div class="profile-userpic">
+                          <img src="https://cdn2.vectorstock.com/i/1000x1000/37/76/check-user-logo-icon-design-vector-22953776.jpg" class="img-responsive" alt="">
+                        </div>
+                        
+                        <div class="profile-usertitle">
+                          <div class="profile-usertitle-name">
+                            Marcus Doe
+                          </div>
+                          <div class="profile-usertitle-job">
+                            Developer
+                          </div>
+                        </div>
+                        <!-- END SIDEBAR USER TITLE -->
+                        <!-- SIDEBAR BUTTONS -->
+                        <div class="profile-userbuttons">
+                          <button type="button" class="btn btn-success btn-sm">Aggiungi carta</button>
+                          <button type="button" class="btn btn-danger btn-sm">Elimina account</button>
+                        </div>
+                        <!-- END SIDEBAR BUTTONS -->
+                        <!-- SIDEBAR MENU -->
+                        <div class="profile-usermenu">
+                        <div class="row">
+                          <div class="col-sm-6" style="left: 50%; transform: translate(-50%);">
+                            <ul class="nav nav-pills flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:blue">I miei ordini</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:blue">Metodi di pagamento</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:blue">Modifica dati profilo</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link " href="#" style="color:red">Logout</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                      </div>
+                  </div>  
+              </div>
+          </li> 
+          ';
+
       ?>
       
 
