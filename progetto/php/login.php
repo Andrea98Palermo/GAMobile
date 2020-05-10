@@ -38,5 +38,5 @@ if (isset($_POST['login'])) {
         }
     }
     
-    printf($msg, '<a href="../login.html">torna indietro</a>');
+    printf($msg, '<a href="../index.php">torna indietro</a>');
 }

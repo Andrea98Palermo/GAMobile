@@ -1,0 +1,28 @@
+/*NAVBAR + NAV*/
+
+.tasto-login {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to bottom right, rgb(182, 122, 11),rgb(39, 27, 2));
+    border-radius: 10px;
+    position:absolute;
+    top: 20%;
+    right: 1%;
+    }
+    
+.navbar{
+min-height: 65px; 
+}
+
+.nav-link{
+white-space: nowrap;
+overflow: hidden;
+}
+
+/*
+  @media (max-width: 767px) {
+    .navbar .login-btn {
+      right: 75px;
+    }
+  }
+  */

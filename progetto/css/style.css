@@ -1,375 +1,207 @@
-    /*IMPORTANTE ALTRIMENTI I MODAL FREEZANO*/
-    body.modal-open div.modal-backdrop { 
-      z-index: 0; 
-    }
+/*SEZIONE VARI*/
 
-    /* Profile container */
-.profile {
-  margin: 20px 0;
+/*IMPORTANTE ALTRIMENTI I MODAL FREEZANO*/
+body.modal-open div.modal-backdrop { 
+  z-index: 0; 
 }
 
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 20px 0 10px 0;
-  background: #fff;
-}
+body{
+  background-color: black;
+}     
 
-.profile-userpic img {
-  float: none;
-  margin: 0 auto;
-  width: 50%;
-  height: 50%;
-}
-
-.profile-usertitle {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.profile-usertitle-name {
-  color: #5a7391;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 7px;
-}
-
-.profile-usertitle-job {
+.testo-primario-chiaro{
   text-transform: uppercase;
-  color: #5b9bd1;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  font-size: 125%;
+  font-weight: 800;
+  color:white;
 }
 
-.profile-userbuttons {
-  text-align: center;
-  margin-top: 10px;
+.testo-secondario-chiaro{
+  font-weight: 500;
+  color:gray;
 }
 
-.profile-userbuttons .btn {
+.testo-primario-scuro{
   text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 6px 15px;
-  margin-right: 5px;
+  font-size: 125%;
+  font-weight: 800;
+  color:black;
 }
 
-.profile-userbuttons .btn:last-child {
-  margin-right: 0px;
-}
-    
-.profile-usermenu {
-  margin-top: 30px;
+.testo-secondario-scuro{
+  font-weight: 500;
+  color:darkgray;
 }
 
-.profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7;
+.bottone-maiusc{            /*da usare in un button in combinazione con btn-success o btn-danger (e button-sm)*/
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 2% 4%;
 }
 
-.profile-usermenu ul li:last-child {
-  border-bottom: none;
+/*usato ad es. per blocco-testo*/
+.centrato-orizzontale{
+  left: 50%;
+  transform: translate(-50%)
 }
 
-.profile-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 14px;
-  font-weight: 400;
-}
+.campo-form {         /*da usare in combinazione con form-control(?)*/
+  margin: 1em 0;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  border-bottom: 3px solid rgb(70, 43, 4);
+  border-top: 1px solid rgb(82, 49, 4);
+  padding-left: 3%;
+  font-weight: normal;
+  background-color: black;
+  opacity: 0.5;
+  }
+  
+  .campo-form:hover, .campo-form:focus {
+    box-shadow: none;  
+    border-color: green;
+  }
 
-.profile-usermenu ul li a i {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
-}
-
-.profile-usermenu ul li.active {
-  border-bottom: none;
-}
-
-.profile-usermenu ul li.active a {
-  color: #5b9bd1;
-  background-color: #f6f9fb;
-  border-left: 2px solid #5b9bd1;
-  margin-left: -2px;
-}
-
-    
-    
-    
-    
-
-    .carousel-item,
-    .carousel-inner,
-    .carousel-inner img {
-      height: 100%;
-      width: 100%;
-    }
-    .carousel-item {
-      text-align: center;
-    }
-    .carousel {
-      height: 90%;
-      width: auto;
-    }
-    
-    body{
-      height: 100vh;
-      text-align: center;
-      background-color: black;
-    }
-      /*Trigger Button*/
-    .login-trigger {
-      font-weight: bold;
-      color: #fff;
-      background: linear-gradient(to bottom right, #B05574, #F87E7B);
-      padding: 15px 30px;
-      border-radius: 30px;
-      position: relative; 
-      top: 20%;
-    }
-
-    /*Modal*/
-    h4 {
-      font-weight: bold;
-      color: #fff;
-    }
-    .close {
-      color: #fff;
-      transform: scale(1.2)
-    }
-    .modal-content {
-      font-weight: bold;
-      background: linear-gradient(to bottom right,#F87E7B,#B05574);
-    }
-    .form-control {
-      margin: 1em 0;
-    }
-    .form-control:hover, .form-control:focus {
-      box-shadow: none;  
-      border-color: #fff;
-    }
-    .username, .password {
-      border: none;
-      border-radius: 30px;
-      box-shadow: none;
-      border-bottom: 2px solid #eee;
-      padding-left: 0;
-      font-weight: normal;
-      background: transparent;  
-    }
-    .form-control::-webkit-input-placeholder {
-      color: #eee;  
-    }
-    .form-control:focus::-webkit-input-placeholder {
-      font-weight: bold;
-      color: #fff;
-    }
-    .login {
-      padding: 6px 20px;
-      border-radius: 20px;
-      background: none;
-      border: 2px solid #FAB87F;
-      color: #FAB87F;
-      font-weight: bold;
-      transition: all .5s;
-      margin-top: 1em;
-    }
-    .login:hover {
-      background: #FAB87F;
-      color: #fff;
-    }
-
-    .navbar{
-        height: 65px; 
-    }
-
-    .nav-link{
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .login-item{
-        margin-left: 30px;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-    
-    /* Create four equal columns that sits next to each other */
-    .flexcolumn {
-      flex: 50%;
-      max-width: 50%;
-      
-    }
-    
-    .flexcolumn img {
-      margin-top: 8px;
-      vertical-align: middle;
-      width: 100%;
-    }
-    
-    .container img
-    {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      vertical-align: middle;
-      width: 100%;
-    }
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 750px) {
-      .flexcolumn {
-        flex: 100%;
-        max-width: 100%;
-      }
-      
-    }
-    
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
-    @media screen and (max-width: 600px) {
-      .column {
-        flex: 100%;
-        max-width: 100%;
-      }
+  /*
+  .campo-form::-webkit-input-placeholder {
+    color: #eee;  
+  }
+  .campo-form::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #fff;
     }
     */
 
-    /* Container holding the image and the text */
 .container {
   position: relative;
 }
 
-/* Bottom right text */
-.big-text-block {
+@media only screen and (min-width : 1200px) {       /*container principale a tutto schermo*/
+  .container { max-width: 1500px; }
+}
+
+/*CAROSELLO*/   
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {     
+height: 100%;
+width: 100%;
+}
+.carousel-item {
+text-align: center;
+}
+.carousel {
+height: 750px;    /*cambiare in 90% e mettere immagini con dimensioni uguali*/
+width: 100%;
+}
+
+/*FINE SEZONE VARI*/
+
+
+
+    
+    
+/*SEZIONE MODAL*/
+
+.close {
+  color: #fff;
+  transform: scale(1.2)
+}
+
+.modal-content {
+  font-weight: bold;
+  background: linear-gradient(to top left,rgb(182, 122, 11),rgb(39, 27, 2));
+  border-radius: 15px;
+}
+
+/*FINE SEZONE MODAL*/
+
+
+
+
+
+
+
+
+/*SEZONE GRIGLIE CON IMMAGINI E BLOCCHI TESTO */  
+
+/*riga con elementi(colonne) flessibili*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/*colonna a metà schermo*/
+.colonna-flex-piccola {
+flex: 50%;
+}
+
+/*colonna a tutto schermo*/
+.colonna-flex-grande {
+  flex: 100%;
+  }
+
+.colonna-flex-grande img
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.colonna-flex-piccola img
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two columns */
+@media screen and (max-width: 900px) {
+  .colonna-flex-piccola {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+}
+
+/*BLOCCHI TESTO*/
+
+/* Da usare in container ad es. per testo su immagini */
+.blocco-testo {
   display: flex;
   flex-wrap: wrap;
   flex: 40%;
   max-width: 40%;
   position: absolute;
-  
   top: 5%;
-  left: 50%;
-  transform: translate(-50%);
-
   background-color: black;
-  color: white;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
   opacity: 0.6;
+  text-align: center;
 }
 
-.small-text-block {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 40%;
-  min-width: 0;
-  max-width: 40%;
-  position: absolute;
-  
+.colonna-flex-grande .blocco-testo{
+  top: 5%;
+  border-radius: 5px;
+}
+
+.colonna-flex-piccola .blocco-testo{
   top: 10%;
-  left: 50%;
-  transform: translate(-50%);
-
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
   border-radius: 3px;
-  opacity: 0.6;
 }
 
-.text-in-block{
+.testo-in-blocco{
   flex:100%;
   max-width: 100%;
+  margin-top: 3%;
 }
+/*FINE SEZONE GRIGLIA CON IMMAGINI E BLOCCHI TESTO*/
 
 
-    /*-------------------------------------------------------------------------------------------------------*/
-    
-
-    /*distanziare tra sezioni*/
-    .big-padding{padding: 50px 0;}
-
-
-
-    /*per la cover immagine*/
-    .cover{height: 80%;border: 1px;
-    background-image: url("https://source.unsplash.com/random");
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size:cover;
-    background-position: center center;
-    position: relative;
-    }
-
-    .cover__caption{
-      display: table;
-      height: 100%;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-      padding: 0 20px;
-    }
-
-    .cover__caption__copy{
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      color:#fff;
-    }
-
-    .cover__caption__filter{
-      background:#000;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      z-index: 0;
-      opacity: 0.5;
-    }
-
-    .cover--single{height: 60%;}
-
-    /*cardddd*/
-
-    .cards{max-width: 1000px; margin: 40px auto;}
-    .card{width: 30%;margin: 0 1.5%;background: #fff; float: left;}
-    .card__image{width: 100%;height: auto;}
-    .card__copy{padding:5px 20px;}
-    .card__copy h3{margin-bottom: 0;}
-
-    /*banner*/
-
-    .banner{background: #fff; height: 50%; margin: 40px auto;}
-    .banner__image{width: 30%;float: left; height: 100%;
-      background-image: url("https://source.unsplash.com/random/400x400");
-      background-size: cover;
-      -o-background-size: cover;
-      -moz-background-size:cover;
-      background-position: center center;}
-    .banner__copy{width: 70%;float: left; height: 100%;display: table;}
-    .banner__copy__text{display: table-cell;vertical-align: middle;padding: 30px;}
-    .banner__copy__text h3{font-size: 36px;}
-
-
-    .clearfix:after {
-      visibility: hidden;
-      display: block;
-      font-size: 0;
-      content: " ";
-      clear: both;
-      height: 0;
-    }
-    * html .clearfix             { zoom: 1; } /* IE6 */
-    *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-
-    /*singol per articolo*/
-    .single{}
-    .single__copy{max-width: 800px; margin: 0px auto;margin-top: -60px; background: #fff; padding: 20px; position: relative; z-index: 1;}
-    

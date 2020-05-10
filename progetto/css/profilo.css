@@ -1,0 +1,81 @@
+/*PROFILO*/
+          /* Profile container */
+          .profile {
+            margin: 20px 0;
+          }
+
+          /* Profile sidebar */
+          .scheda-profilo {
+            background: #fff;
+          }
+
+          .immagine-profilo img {
+            float: none;
+            margin: 0 auto;
+            width: 50%;
+            height: 50%;
+          }
+
+          .info-profilo {
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          .info-profilo-utente {
+            color: #5a7391;
+            margin-bottom: 7px;
+          }
+
+          .info-profilo-bentornato {
+            color: #5b9bd1;
+            margin-bottom: 15px;
+          }
+
+          .sezione-bottoni {
+            text-align: center;
+            margin-top: 5%;
+          }
+
+          .sezione-bottoni .btn-sm {
+            margin-right:2%;
+            font-size: 50%;
+          }
+
+          /*
+          .sezione-bottoni .btn:last-child {
+            margin-right: 0px;
+          }*/
+              
+          .sezione-menu {
+            margin-top: 30px;
+          }
+
+          .sezione-menu ul li {
+            border-bottom: 1px solid #f0f4f7;
+          }
+
+          .sezione-menu ul li:last-child {
+            border-bottom: none;
+          }
+          
+          .sezione-menu .nav .nav-item .nav-link{
+            color: #93a3b5;
+            font-size: 14px;
+            font-weight: 400;
+          }
+
+          .sezione-menu .nav .nav-item .nav-link:hover{
+            background-color: #fafcfd;
+            color: #5b9bd1;
+          }
+    
+
+          
+
+          .sezione-menu .nav .nav-item.active .nav-link{
+            color: #5b9bd1;
+            background-color: #f6f9fb;
+            border-left: 2px solid #5b9bd1;
+            margin-left: -2px;
+          }
+          
