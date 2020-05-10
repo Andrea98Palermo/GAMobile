@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="css/navbar.css" type="text/css">
         <link rel="stylesheet" href="css/profilo.css" type="text/css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="js/registrationScript.js"></script>
         <script>
               $(window).scroll(function(){
                 var scrollval = window.pageYOffset;
@@ -52,28 +53,58 @@
             <!-- TODO: CRIPTARE PASSWORD IN JAVASCRIPT -->
 
             <?php 
-              if (! isset($_SESSION['session_user'])) {
+              if (! isset($_SESSION['session_id'])) {
                   echo 
                   '
                   <li class="nav-item" style="margin-left:2%">
                       <a class="tasto-login" id="log_a" href="#" data-target="#login" data-toggle="modal">Login</a>
                       <div id="login" class="modal fade">
-                          <div class="modal-dialog">
+                      <div class="modal-dialog">
                               <div class="modal-content">
                               <div class="modal-body" style="padding-left:15%; padding-right:15%; margin-top:5%;">
-                                  <button data-dismiss="modal" class="close">&times;</button>
-                                  <div style="text-align:center">
-                                    <span class="testo-primario-chiaro">Login</span>
-                                    <form method="POST" action="./php/login.php" style="margin-top:10%; margin-bottom:5%;">
-                                    <input type="text" name="username" class="campo-form form-control" placeholder="Username" required/>
-                                    <input type="password" name="password" class="campo-form form-control" placeholder="Password" required/>
-                                    <input class="btn btn-success" type="submit" value="Login" name="login"/>
+                              <button data-dismiss="modal" class="close">&times;</button>
+
+                              <!-- Nav tabs -->
+                                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+                                    </li>
+                                  </ul>
+
+                              <!-- Tab panes -->
+                                  <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                          <div style="text-align:center">
+                                            <span class="testo-primario-chiaro">Login</span>
+                                            <form method="POST" action="./php/login.php"  style="margin-top:10%; margin-bottom:5%;">
+                                            <input type="text" name="username" class="campo-form form-control" placeholder="Username"  required/>
+                                            <input type="password" name="password" class="campo-form form-control" placeholder="Password" required/>
+                                            <input class="btn btn-success" type="submit" value="Login" name="login"/>
+                                            </form>
+                                          
+                                            <!--<span class="testo-secondario-chiaro" style="display:inline">Non sei registrato?</span>
+                                              <a class="nav-link testo-primario-chiaro" style="display:inline" href="register.html">Clicca qui</a>
+                                            <span class="testo-secondario-chiaro" style="display:inline">per registrarti</span>-->
+                                          </div>
+                                    </div>
+                                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div style="text-align:center">
+                                    <span class="testo-primario-chiaro">Registration</span>
+                                    <form method="POST" action="./php/register.php" name="registrationForm" onSubmit="return validaForm()">
+                                      <input type="email" id="Email" class="campo-form form-control" placeholder="E-mail" >
+                                      <input type="text" id="username" class="campo-form form-control" placeholder="Insert Username" name="username" maxlength="50" onChange="return controllaUsername()" required>
+                                      <input type="password" id="password" class="campo-form form-control" placeholder="Insert Password" name="password" onChange="return controllaPassword()" required>
+                                      <input type="password" id="password2" class="campo-form form-control" placeholder="Confirm Password" name="password2" onChange="return confirmPassword()" required>
+                                      <button type="submit" class="btn btn-success" name="register">Registrati</button>
                                     </form>
-                                  
-                                    <span class="testo-secondario-chiaro" style="display:inline">Non sei registrato?</span>
-                                      <a class="nav-link testo-primario-chiaro" style="display:inline" href="register.html">Clicca qui</a>
-                                    <span class="testo-secondario-chiaro" style="display:inline">per registrarti</span>
+                                    </div>
+                                    </div>
                                   </div>
+
+
                               </div>
                               </div>
                           </div>  
@@ -126,7 +157,7 @@
                                         <a class="nav-link" href="#">Modifica dati profilo</a>
                                       </li>
                                       <li class="nav-item">
-                                        <a class="nav-link" href="#q" style="color:red">Logout</a>
+                                        <a class="nav-link" href="./php/logout.php" style="color:red">Logout</a>
                                       </li>
                                     </ul>
                                   </div>
@@ -139,7 +170,6 @@
                     </div>
                 </li> 
                 ';
-
             ?>
             
 
