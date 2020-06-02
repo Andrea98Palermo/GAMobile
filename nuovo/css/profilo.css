@@ -1,0 +1,67 @@
+/*PROFILO*/
+          /* Profilo */
+          .profile {
+            margin: 20px 0;
+          }
+
+          .scheda-profilo {
+            background: #fff;
+          }
+
+          /*immagine profilo con logo*/
+          .immagine-profilo img {
+            float: none;
+            margin: 0 auto;
+            width: 30%;
+            height: 30%;
+          }
+
+          .info-profilo {
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          .info-profilo-utente {
+            color: #5a7391;
+            margin-bottom: 7px;
+          }
+
+          .info-profilo-bentornato {
+            color: #5b9bd1;
+            margin-bottom: 15px;
+          }
+
+          /* per fare i bottoni */
+          .sezione-bottoni {
+            text-align: center;
+            margin-top: 5%;
+          }
+
+          .sezione-bottoni .btn-sm {
+            margin-right:2%;
+            font-size: 70%;
+          }
+              
+          /* menu sotto estetica */
+          .sezione-menu {
+            margin-top: 30px;
+          }
+
+          .card-body .carddd{
+            padding: 30px 30px 20px;
+          }
+
+
+          
+        
+
+
+
+
+          
+
+          
+
+
+          
+          

@@ -1,0 +1,30 @@
+/*NAVBAR + NAV piccola per login e registrazione*/
+
+.tasto-login {
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to bottom right, rgb(182, 122, 11),rgb(39, 27, 2));
+    border-radius: 10px;
+    position:absolute;
+    top: 20%;
+    right: 1%;
+    }
+    
+.navbar{
+min-height: 65px; 
+}
+
+.nav-link{
+white-space: nowrap;
+overflow: hidden;
+}
+
+  .navbar-brand img{
+    height: 50px;
+    width: 80px;
+  }
+
+  .nav-tabs .nav-link.active{
+    background-color: transparent;
+    border-color: transparent;
+  }
