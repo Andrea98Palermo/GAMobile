@@ -14,7 +14,7 @@ if (isset($_POST['cardd'])) {
 
     $query = "
                 INSERT INTO cards
-                VALUES (0, :id, :n_carte, :proprietario, :anno, :mese, :cvv)
+                VALUES (0, :id, :n_carte, :proprietario, :anno, :mese, :cvv, :username)
             ";
         
             $check = $pdo->prepare($query);
@@ -24,6 +24,7 @@ if (isset($_POST['cardd'])) {
             $check->bindParam(':anno', $anno, PDO::PARAM_STR);
             $check->bindParam(':mese', $mese, PDO::PARAM_STR);
             $check->bindParam(':cvv', $cvv, PDO::PARAM_STR);
+            $check->bindParam(':username', $_SESSION['session_user'], PDO::PARAM_STR);
             $check->execute();
 
             //la aggiunge con la query
@@ -39,25 +40,7 @@ if (isset($_POST['cardd'])) {
     printf($msg, '<a href="../index.php">torna indietro</a>');
     exit;
 
-}
-//elimina la carta 
-elseif (isset($_GET['session_user'])) { 
-    
-    $sql = "DELETE FROM cards WHERE identificatore =  :identificatore";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':identificatore',  $_GET["eliminare"], PDO::PARAM_INT);   
-    $stmt->execute();
-
-    if ($stmt->rowCount() > 0) {
-        $msg = 'Eliminazione eseguita con successo';
-        header("location: ../index.php");
-    } else {
-        $msg = 'Problemi aa ';
-    }
-    printf($msg, '<a href="../index.php">torna indietro</a>');
-    exit;
-}
-//domanda ajax per vedre se la carta non esiste gia'
+}//domanda ajax per vedre se la carta non esiste gia'
 else{
     $query = "
             SELECT identificatore
