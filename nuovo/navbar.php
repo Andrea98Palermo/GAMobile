@@ -2,23 +2,24 @@
     //Query che potranno servire nel profilo utente, come i miei ordini e le carte
     require_once('php/database.php');
 
-    $query = 'SELECT identificatore, proprietario 
+    $query1 = 'SELECT identificatore, proprietario 
              FROM cards
              WHERE id= :id';
     
-    $check = $pdo->prepare($query);
+    $check = $pdo->prepare($query1);
     $check->bindParam(':id', $_SESSION['session_identificatore'], PDO::PARAM_STR);
     $check->execute();
-    //$tt =$check->fetch();
-    //$q = $pdo->query($query);
-    /*$query = 'SELECT identificatore, proprietario 
+
+
+    $query2 = 'SELECT id_acquisto, nome_prodotto
              FROM acquisti
-             WHERE id_utente= :id_utente';
+             WHERE nome_utente= :nome_utente';
     
-    $check = $pdo->prepare($query);
-    $check->bindParam(':id_utente', $_SESSION['session_identificatore'], PDO::PARAM_STR);
-    $check->execute();*/
+    $checkk = $pdo->prepare($query2);
+    $checkk->bindParam(':nome_utente', $_SESSION['session_user'], PDO::PARAM_STR);
+    $checkk->execute();
     //exit;
+
 ?>
 
 <html>
@@ -76,19 +77,19 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="prodotti.php">Products</a>
+              <a class="nav-link" href="prodotti.php">Prodotti</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="usato.php">Used & Refurbed</a>
+              <a class="nav-link" href="usato.php">Usato</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Offerte</a>
+            </li>   --> 
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.php">Noi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Offers</a>
-            </li>    
-            <li class="nav-item">
-              <a class="nav-link" href="about_us.php">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacts_assistance.php">Contacts & assistance</a>
+              <a class="nav-link" href="contacts_assistance.php">Assistenza</a>
             </li>
 
             <!-- pulsante che dipende dai casi: -->
@@ -112,10 +113,10 @@
 
                               <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Accedi</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+                                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registrazione</a>
                                 </li>
                               </ul>
 
@@ -124,7 +125,7 @@
                               <div class="tab-content">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                       <div style="text-align:center">
-                                        <span class="testo-primario-chiaro">Login</span>
+                                        <span class="testo-primario-chiaro">Accedi</span>
 
                                         <form method="POST" action="php/login.php"  style="margin-top:10%; margin-bottom:5%;" onSubmit="return validaFormLogin()">
                                         <input type="text" id="username1" name="username" class="campo-form form-control" placeholder="Username"  required/>
@@ -139,12 +140,12 @@
 
                               <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div style="text-align:center">
-                                <span class="testo-primario-chiaro">Registration</span>
+                                <span class="testo-primario-chiaro">Registrazione</span>
 
                                 <form method="POST" action="php/register.php" name="registrationForm" onSubmit="return validaFormRegister()">
-                                  <input type="email" id="email" class="campo-form form-control" placeholder="Inserisci E-mail (facoltativo)" name="email">
-                                  <input type="text" id="username" class="campo-form form-control" placeholder="Inserisci Username" name="username" maxlength="50" required>
-                                  <input type="password" id="password" class="campo-form form-control" placeholder="Inserisci Password" name="password" required>
+                                  <input type="email" id="email" class="campo-form form-control" placeholder="Inserire E-mail (facoltativo)" name="email">
+                                  <input type="text" id="username" class="campo-form form-control" placeholder="Inserire Username" name="username" maxlength="50" required>
+                                  <input type="password" id="password" class="campo-form form-control" placeholder="Inserire Password" name="password" required>
                                   <input type="password" id="password2" class="campo-form form-control" placeholder="Conferma Password" name="password2" required>
                                   <input type="text" id="indirizzo" class="campo-form form-control" placeholder="Inserire indirizzo (facoltativo)" name="indirizzo">
                                   <button type="submit" class="btn btn-success" name="register">Registrati</button>
@@ -167,7 +168,7 @@
                 echo 
 
                 '<li class="nav-item login-item">
-                  <a class="tasto-login nav-link" id="log_a" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Hi, ', $_SESSION['session_user'] ,'</a>
+                  <a class="tasto-login nav-link" id="log_a" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Ciao, ', $_SESSION['session_user'] ,'</a>
                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-lg" role="dialog">
                         <div class="modal-content">
@@ -219,21 +220,21 @@
                                         <!-- caso in cui fa vedere le diverse carte associate all utente, se ne ha -->
 
                                         ';
-                                        $tt =$check->fetch();
-                                        if ($tt==0){
+                                        $cartaCredito =$check->fetch();
+                                        if ($cartaCredito==0){
                                           echo ("nessuna carta registrata :");
                                           echo '<a class="bottone-maiusc btn-success btn-sm" href="carta.html">Aggiungi carta</a>';
                                         }else{
                                           //echo ' <form method="POST" action="./php/carta.php" name="eliminacartaForm">
-                                          echo htmlspecialchars($tt['proprietario']);
+                                          echo htmlspecialchars($cartaCredito['proprietario']);
                                           echo '  ';
-                                          echo '<a class="bottone-maiusc btn-danger btn-sm" href="php/carta.php?eliminare=',$tt['identificatore'],'">elimina</a></br></br></br>';
-                                        while ($tt = $check->fetch()):
-                                          echo htmlspecialchars($tt['proprietario']);
+                                          echo '<a class="bottone-maiusc btn-danger btn-sm" href="php/elimina_carta.php?eliminare=',$cartaCredito['identificatore'],'">elimina</a></br></br>';
+                                        while ($cartaCredito = $check->fetch()):
+                                          echo ' <div class="separatore"></div></br> ';
+                                          echo htmlspecialchars($cartaCredito['proprietario']);
                                           echo '  ';
-                                          echo '<a class="bottone-maiusc btn-danger btn-sm" href="php/carta.php?eliminare=',$tt['identificatore'],'">elimina</a>';
+                                          echo '<a class="bottone-maiusc btn-danger btn-sm" href="php/elimina_carta.php?eliminare=',$cartaCredito['identificatore'],'">elimina</a>';
                                         endwhile;
-                                        echo '</table>';
                                       }
                                         
                                         echo'
@@ -257,11 +258,11 @@
                                         <div class="card-body">
 
                                           <form method="POST" action="php/modify.php" name="modifyForm" class="carddd" onSubmit="return validaMod()">
-                                              <input type="text" id="emailM" class="campo-form form-control" placeholder="Inserisci email" value="',$_SESSION['session_email'],'" name="emailM" maxlength="50">
+                                              <input type="text" id="emailM" class="campo-form form-control" placeholder="Inserire email" value="',$_SESSION['session_email'],'" name="emailM" maxlength="50">
                                               <input type="text" id="usernameM" class="campo-form form-control" value="',$_SESSION['session_user'],'" name="usernameM" maxlength="50">
-                                              <input type="password" id="passwordM" class="campo-form form-control" placeholder="Inserisci nuova Password" name="passwordM" >
+                                              <input type="password" id="passwordM" class="campo-form form-control" placeholder="Inserire nuova Password" name="passwordM" >
                                               <input type="password" id="password2M" class="campo-form form-control" placeholder="Conferma Password" name="passwordM" >
-                                              <input type="text" id="indirizzoM" class="campo-form form-control" placeholder="Inserisci indirizzo" value="',$_SESSION["session_indirizzo"],'" name="indirizzoM" >
+                                              <input type="text" id="indirizzoM" class="campo-form form-control" placeholder="Inserire indirizzo" value="',$_SESSION["session_indirizzo"],'" name="indirizzoM" >
                                               <button type="submit" class="bottone-maiusc btn-success btn-sm" name="modify">Modifica</button>
                                               <input type="reset" class="bottone-maiusc btn-danger btn-sm" value="Reset" />
                                           </form>     
@@ -279,11 +280,30 @@
                                           </button>
                                         </h2>
                                       </div>
-                                      
+                                    
+                                      <!-- caso in cui fa vedere il nome dei vari prodotti comprati, associati all utente, se ne ha -->
 
                                       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                         <div class="card-body">
-                                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusof them accusamus labore sustainable VHS.
+                                        
+                                        ';
+                                        $pr =$checkk->fetch();
+                                        if ($pr==0){
+                                          echo ("nessun acquisto effetuato!");
+                                          echo '</br>';
+                                        }else{
+                                          //echo ' <form method="POST" action="./php/carta.php" name="eliminacartaForm">
+                                          echo htmlspecialchars($pr['nome_prodotto']);
+                                          echo '</br>';
+                                        while ($pr = $checkk->fetch()):
+                                          echo ' <div class="separatore"></div></br> ';
+                                          echo htmlspecialchars($pr['nome_prodotto']);
+                                          echo '</br>';
+                                        endwhile;
+                                      }
+                                        
+                                        echo'
+
                                         </div>
                                       </div>
                                     </div>
@@ -294,7 +314,7 @@
                                       <div class="card-header" id="headingFour">
                                         <h2 class="mb-0 ">
                                           <a class="link collapsed" href="php/logout.php" style="color:red" >
-                                          Logout
+                                          Esci
                                           </a>
                                         </h2>
                                       </div>
