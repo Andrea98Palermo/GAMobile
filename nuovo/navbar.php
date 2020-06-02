@@ -127,10 +127,10 @@
                                       <div style="text-align:center">
                                         <span class="testo-primario-chiaro">Accedi</span>
 
-                                        <form method="POST" action="php/login.php"  style="margin-top:10%; margin-bottom:5%;" onSubmit="return validaFormLogin()">
+                                        <form method="POST" action="php/login.php"  style="margin-top:10%; margin-bottom:5%;" onSubmit="$("#tasto-log").click(); return validaFormLogin();">
                                         <input type="text" id="username1" name="username" class="campo-form form-control" placeholder="Username"  required/>
                                         <input type="password" id="password1" name="password" class="campo-form form-control" placeholder="Password" required/>
-                                        <input class="btn btn-success" type="submit" value="Login" name="login"/>
+                                        <input id="tasto-log" class="btn btn-success" type="submit" value="Login" name="login"/>
                                         </form>
                                       
                                       </div>
