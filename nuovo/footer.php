@@ -30,6 +30,13 @@
         
         .colonna-footer b {color: gray; font-weight: 2000;}
 
+        .colonna-footer img{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            vertical-align: middle;
+            width: 30%;
+        }
+
         </style>
     </head>
     
@@ -45,22 +52,25 @@
                     <div class="column colonna-footer">
                         <h2>GA-Mobili</h2>
                         <b> In questo sito potete trovare i diversi prodotti del nostro marchio! </b> </br> 
-                        <img src="assets/Logopit_1589966960533.png" alt="200" width="200" />
+                        <img src="assets/Logopit_1589966960533.png" />
                     </div>
                     <!-- seconda colonna link veloci -->
                     <div class="column colonna-footer">
                         <h5>Ricerche veloci</h5>
                         <div>
-                            <a href="#">Link 1</a>
+                            <a href="index.php">Pagina principale</a>
                         </div>
                         <div>
-                            <a href="#">Link 2</a>
+                            <a href="prodotti.php">Prodotti</a>
                         </div>
                         <div>
-                            <a href="#">Link 3</a>
+                            <a href="usato.php">Usato</a>
                         </div>
                         <div>
-                            <a href="#">Link 4</a>
+                            <a href="about_us.php">Noi</a>
+                        </div>
+                        <div>
+                            <a href="contacts_assistance.php">Assistenza</a>
                         </div>
                     </div>
                     <div class="column colonna-footer">
@@ -143,3 +153,4 @@
         </div>
     </body>
 </html>
+
