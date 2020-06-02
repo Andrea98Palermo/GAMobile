@@ -11,7 +11,7 @@
     $check->execute();
 
 
-    $query2 = 'SELECT id_acquisto, nome_prodotto
+    $query2 = 'SELECT nome_prodotto, data, condizione
              FROM acquisti
              WHERE nome_utente= :nome_utente';
     
@@ -293,13 +293,25 @@
                                           echo '</br>';
                                         }else{
                                           //echo ' <form method="POST" action="./php/carta.php" name="eliminacartaForm">
+                                          echo '<table>
+                                          <tr><td>Nome prodotto</td><td>Data</td><td>condizione</td></tr>
+                                           <tr><td>';
                                           echo htmlspecialchars($pr['nome_prodotto']);
-                                          echo '</br>';
+                                          echo '</td><td>';
+                                          echo htmlspecialchars($pr['data']);
+                                          echo '</td><td>';
+                                          echo htmlspecialchars($pr['condizione']);
+                                          echo '</td></tr>';
                                         while ($pr = $checkk->fetch()):
-                                          echo ' <div class="separatore"></div></br> ';
+                                          //echo ' <div class="separatore"></div></br> ';
                                           echo htmlspecialchars($pr['nome_prodotto']);
-                                          echo '</br>';
+                                          echo '</td><td>';
+                                          echo htmlspecialchars($pr['data']);
+                                          echo '</td><td>';
+                                          echo htmlspecialchars($pr['condizione']);
+                                          echo '</td></tr>';
                                         endwhile;
+                                        echo '</table>';
                                       }
                                         
                                         echo'
