@@ -2,7 +2,7 @@
     //Query che potranno servire nel profilo utente, come i miei ordini e le carte
     require_once('php/database.php');
 
-    $query1 = 'SELECT identificatore, proprietario 
+    $query1 = 'SELECT identificatore, n_carte, proprietario 
              FROM cards
              WHERE id= :id';
     
@@ -86,7 +86,7 @@
               <a class="nav-link" href="#">Offerte</a>
             </li>   --> 
             <li class="nav-item">
-              <a class="nav-link" href="about_us.php">Noi</a>
+              <a class="nav-link" href="about_us.php">Su di Noi</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contacts_assistance.php">Assistenza</a>
@@ -227,11 +227,15 @@
                                         }else{
                                           //echo ' <form method="POST" action="./php/carta.php" name="eliminacartaForm">
                                           echo htmlspecialchars($cartaCredito['proprietario']);
+                                          echo ',  n: ';
+                                          echo htmlspecialchars($cartaCredito['n_carte']);
                                           echo '  ';
                                           echo '<a class="bottone-maiusc btn-danger btn-sm" href="php/elimina_carta.php?eliminare=',$cartaCredito['identificatore'],'">elimina</a></br></br>';
                                         while ($cartaCredito = $check->fetch()):
                                           echo ' <div class="separatore"></div></br> ';
                                           echo htmlspecialchars($cartaCredito['proprietario']);
+                                          echo ',  n: ';
+                                          echo htmlspecialchars($cartaCredito['n_carte']);
                                           echo '  ';
                                           echo '<a class="bottone-maiusc btn-danger btn-sm" href="php/elimina_carta.php?eliminare=',$cartaCredito['identificatore'],'">elimina</a>';
                                         endwhile;
@@ -304,6 +308,7 @@
                                           echo '</td></tr>';
                                         while ($pr = $checkk->fetch()):
                                           //echo ' <div class="separatore"></div></br> ';
+                                          echo '<tr><td>';
                                           echo htmlspecialchars($pr['nome_prodotto']);
                                           echo '</td><td>';
                                           echo htmlspecialchars($pr['data']);
