@@ -1,0 +1,254 @@
+
+
+
+html,body{height: 100%;}
+
+/* Qui richiamiamo le pagine di assistenza e about_us */
+    
+
+      /*distanziare tra SEZIONI*/
+      .big-padding{padding: 50px 0;}
+
+      /* modifico il testo primario*/
+      .testo-primario-chiaroo{
+        text-transform: uppercase;
+        font-size: 230%;
+        font-weight: 1000;
+        color:white;
+      }
+  
+  
+      /*per la COVER (le immagini le prendiamo da un sito che si chiama unsplash, solo perche' sono meglio*/
+      .cover_assistenza{height: 80%;border: 1px;
+      background-image: url(https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+      background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size:cover;
+      background-position: center center;
+      position: relative;
+      }
+
+      .cover_aboutus{height: 80%;border: 1px;
+        background-image: url(https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80);
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size:cover;
+        background-position: center center;
+        position: relative;
+        }
+  
+      .cover__caption{
+        display: table;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding: 0 20px;
+      }
+  
+      .cover__caption__copy{
+        display: table-cell;
+        vertical-align: bottom;
+        text-align: center;
+        color:#fff;
+      }
+
+      .cover__caption__copy h2{
+        font-size: 120%;
+        font-weight: 2000;
+        color:white;
+      }
+
+      .cover__caption__copy_2{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color:#fff;
+      }
+  
+      .cover__caption__filtro{
+        background:#000;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        opacity: 0.5;
+      }
+  
+      .cover--singole{height: 60%;}
+  
+      /*CARD le usiamo solo in assistenza */
+  
+      .cards{max-width: 1000px; margin: 40px auto; vertical-align: middle;}
+      .cards .card{width: 30%;height: 350px; margin: 0 1.5%;background: #fff; float: left;opacity: 0.8;transition: 1s;} /* qui mettiamo la transizione per il movimento iniziale*/
+      .cards .card__image{width: 100%;height: 200px;}
+      .cards .card__copy{padding:5px 20px;}
+      .cards .card__copy h3{margin-bottom: 0;}
+
+      .cards .card:hover{ /*per il movimento in avanti*/
+        transform:scale(1.3);
+        z-index: 1;
+      }
+      
+      .btn-primary{
+        background-color: gray;
+        border-color: black;
+      }
+      
+      /*qui richiamiamo le BOX cioe' dove abbiamo messo le domande frequenti.*/
+
+      .box{
+        width: 900px;
+        margin: 100px auto;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+        transition: 1s;
+      }
+
+      .box .scritta{
+        background: rgb(51, 49, 53);
+        border-radius: 7px 7px 0px 0px;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+      }
+
+      /* DOMANDE FREQUENTI */
+      .faqs{
+        padding: 0px 20px 20px;
+      }
+
+      ::-webkit-details-marker{
+        float: right;
+        margin-top: 3px;
+        background: #f6f6f6;
+        padding: 10px;
+      }
+
+      details{
+        background: #f6f6f6;
+        padding: 10px;
+        border-radius: 7px;
+        margin-top: 20px;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      details summary{
+        outline: none;
+      }
+
+      .box:hover{ /* per il movimento in avanti*/
+        transform:scale(1.3);
+        z-index: 1;
+      }
+  
+      /*BANNER utilizzati in entrambe le pagine, abbiamo differenziato cosi ogni immagine si capisce dove va.*/
+  
+      .banner{background: #fff; height: 50%; margin: 40px auto;opacity: 0.8;}
+      .banner__image1{width: 30%;float: left; height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size:cover;
+        background-position: center center;}
+      .banner__image2{width: 30%;float: left; height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1458862768540-8b091824fe2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size:cover;
+        background-position: center center;}
+      .banner__image3{width: 30%;float: left; height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1580982333389-cca46f167381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size:cover;
+        background-position: center center;}
+      .banner__image4{width: 30%;float: left; height: 100%;
+        background-image: url("../assets/Logopit_1588758743983.jpg");
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size:cover;
+        background-position: center center;}
+      .banner__image5{width: 30%;float: left; height: 100%;
+        background-image: url("../assets/Logopit_1588758743983.jpg");
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size:cover;
+        background-position: center center;}
+      .banner__copy{width: 70%;float: left; height: 100%;display: table; }
+      .banner__copy__testo{display: table-cell;vertical-align: middle;padding: 30px;}
+      .banner__copy__testo h3{font-size: 36px;}
+  
+  
+      .clearfix:after {  /* questo ci serve per migliorare e avere piu' pulizia in modo visivo*/
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+      * html .clearfix             { zoom: 1; } 
+      *:first-child+html .clearfix { zoom: 1; } 
+  
+      /*SINGOLE per articolo, dove finisce il testo*/
+      .singole{opacity: 0.5;}
+      .singole__copy{max-width: 800px; margin: 0px auto;margin-top: -60px; background: rgb(182, 179, 179); padding: 20px; position: relative; z-index: 1; opacity: 0.8;}
+
+
+      /* ANIMAZIONI, queste le abbiamo trovate in un sito e le abbiamo provate ad utilizzare, rappresentano l'entrata nella pagina. */
+
+      .animazione{
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+
+      .animazione.infinite {
+        animation-iteration-count: infinite;
+      }
+
+      .animazione.hinge{
+        animation-duration: 2s;
+      }
+
+      .animazione.flipOutX,
+      .animazione.flipOutY,
+      .animazione.bounceIn,
+      .animazione.bounceOut{
+        animation-duration: .75s;
+      }
+
+      @keyframes fadeInUp { /*entrata nella pagina dda lontano a vicino*/
+        from {
+          opacity: 0;
+          transform: translate3d(0, 100%, 0);
+        }
+      
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      
+      .fadeInUp {
+        animation-name: fadeInUp;
+      }
+
+        
+      @keyframes zoomIn { /*zoom in entrata*/
+        from {
+          opacity: 0;
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .zoomIn {
+        animation-name: zoomIn;
+      }
+

@@ -1,0 +1,74 @@
+<!--AUTORE: GIUSEPPE D'IGNAZIO-->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/carta.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="js/cartaScript.js"></script>
+
+    </head>
+    <body>
+      <form method="POST" action="php/carta.php" name="cardForm" class="carta-credito">
+        
+        <div class="form-carta">
+            <!--<img src="assets/Logopit_1589966960533.png" alt="150" width="150">-->
+            <h4 class="titolo">Dettagli carta:</h4>
+        </div>
+        
+        <div class="form-body">
+          <!-- Numero e proprietario carta -->
+          <input type="text" id="ncard" class="numero-carta form-control" placeholder="Numero carta" name="ncard" required>
+      
+          <input type="text" id="proprietario" class="numero-carta form-control" placeholder="Proprietario" name="proprietario" required>
+      
+
+          <!-- Campi per la data -->
+          <div class="mese ">
+              <select name="Month">
+              <option value="Gennaio">Gennaio</option>
+              <option value="Febbraio">Febbraio</option>
+              <option value="Marzo">Marzo</option>
+              <option value="Aprile">Aprile</option>
+              <option value="Maggio">Maggio</option>
+              <option value="Giugno">Giugno</option>
+              <option value="Luglio">Luglio</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Settembre">Settembre</option>
+              <option value="Ottobre">Ottobre</option>
+              <option value="Novembre">Novembre</option>
+              <option value="Dicembre">Dicembre</option>
+              </select>
+          </div>
+          <div class="anno">
+              <select name="Year">
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              </select>
+          </div>
+
+      
+
+          <!-- CVV -->
+          <div class="cvv-input">
+              <input type="text" id="cvv" calss="form-control" placeholder="CVV" name="cvv" required>
+          </div>
+          <div class="cvv-details">
+              <p>3 o 4 numeri di solito si <br> trovano dietro la carta</p>
+          </div>
+          
+      
+          <!-- Bottoni del form -->
+          <button type="submit" class="btn add-btn" name="cardd">Aggiungi</button>
+          <button type="submit" class="back-btn"><a href="index.php">Torna indietro</a></button>
+      </div>
+      </form>
+    </body>
+</html>

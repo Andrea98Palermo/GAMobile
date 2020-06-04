@@ -1,0 +1,161 @@
+/*AUTORE: ANDREA PALERMO*/
+
+.dettagli-prodotto {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	background-color: black;
+}
+
+.area-immagine {
+	flex: 1 1 60%;
+	padding: 10vw 20vh;
+	background-color: #2484E4;
+}
+
+.area-immagine-bianca {
+	flex: 1 1 60%;
+	padding: 10vw 20vh;
+	background-color: rgb(221, 223, 224);
+}
+
+.area-immagine-nera {
+	flex: 1 1 60%;
+	padding: 10vw 20vh;
+	background-color: rgb(34, 35, 36);
+}
+
+.area-immagine img {
+	width: 70%;
+	height: 100%;
+	margin-left:3vw;
+	animation: fadein 1s ease-in-out forwards;
+	animation-delay: 0.5s;
+	opacity: 0;
+}
+
+.area-immagine-bianca img {
+	width: 100%;
+	height: 100%;
+	animation: fadein 1s ease-in-out forwards;
+	animation-delay: 0.5s;
+	opacity: 0;
+}
+
+.area-immagine-nera img {
+	width: 100%;
+	height: 100%;
+	animation: fadein 1s ease-in-out forwards;
+	animation-delay: 0.5s;
+	opacity: 0;
+}
+
+.area-info {
+	flex: 1 1 40%;
+	width: 40%;
+	padding: 3vw;
+}
+
+.testo-area-info {
+	margin-bottom: 1vh;
+	margin-top: 1vh;
+}
+
+.griglia-tasti {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2%;
+}
+
+.griglia-tasti .tasto {
+	flex: 50%;
+	width: 50%;
+	padding: 2%;
+}
+
+button.pulsante {
+	width: 100%;
+	padding: 4%;
+	border: 2px #AAA;
+	cursor: pointer;
+	color: #313131;
+}
+
+button.memoria.selected{
+	background-image: linear-gradient(to right,rgb(0, 237, 237) 0%, rgb(0, 4, 237) 100%);
+}
+
+button.memoria {
+	background-color:rgb(36, 35, 35);
+	color:white;
+}
+
+.colori .tasto .nero.selected {
+	background-color: #212121;
+	color: #FFF;
+}
+
+.colori .tasto .blu.selected {
+	background-color: #2484E4;
+	color: #FFF;
+}
+
+.colori .tasto .rosso.selected {
+	background-color: #AF1E2D;
+	color: #FFF;
+}
+
+.colori .tasto .bianco.selected {
+	background-color: #EEE;
+	color: #212121;
+}
+
+.tasto-acquista {
+	margin-top: 10%;
+	background-color: white;
+}
+
+.tasto-acquista:hover {
+	color: #FFF;
+	background-image: linear-gradient(to right, rgb(0, 237, 237) 50%, rgb(0, 4, 237) 100%);
+}
+
+@keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.condizione{
+	cursor: help;
+}
+
+/*SUGGERIMENTO CONDIZIONE PRODOTTO*/
+.condizione .aiuto {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+  }
+  
+.condizione:hover .aiuto {
+	visibility: visible;
+}
+
+select {
+	width: 100%;
+	padding: 4%;
+	border: 2px #AAA;
+	cursor: pointer;
+	color: #313131;
+}
+
+.compra{
+	width: 50%;
+	margin-left: 25%;
+	margin-top:10%
+}

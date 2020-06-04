@@ -1,0 +1,17 @@
+/*AUTORE: ANDREA PALERMO*/
+
+.titolo-grande{
+    font-size: 9vw;
+    padding-left: 0.5%;   
+    width: fit-content;
+}
+
+.titolo-piccolo{
+    font-size: 5vw;
+    padding-left: 3%;
+    width: fit-content;   
+}
+
+.prodotto{
+    cursor: pointer;
+}
